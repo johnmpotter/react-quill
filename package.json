@@ -15,7 +15,7 @@
     "build:dist": "webpack",
     "build:css": "cpx 'node_modules/quill/dist/quill.*.css' dist",
     "watch": "tsc --watch",
-    "prepare": "npm run build",
+    "prepare": "pnpm install && npm run build",
     "pretest": "npm run build",
     "test": "npm run test:unit && npm run test:coverage && npm run test:browser",
     "test:unit": "mocha --recursive --require=./test/setup.js -R spec test/index",
